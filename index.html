@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MMA Klub Ratnik - Dobrinja, Sarajevo. MMA, Kickbox, BJJ, Funkcionalni treninzi.">
+  <title>MMA Klub Ratnik | Dobrinja, Sarajevo</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-text">RATNIK</span>
+        <span class="logo-sub">MMA KLUB</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" data-i18n="nav.about">O nama</a></li>
+        <li><a href="#programs" data-i18n="nav.programs">Programi</a></li>
+        <li><a href="#schedule" data-i18n="nav.schedule">Raspored</a></li>
+        <li><a href="#trainers" data-i18n="nav.trainers">Treneri</a></li>
+        <li><a href="#gallery" data-i18n="nav.gallery">Galerija</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="langToggle" class="lang-toggle" aria-label="Switch language">
+          <span class="lang-active">BS</span> / <span class="lang-inactive">EN</span>
+        </button>
+        <button id="menuToggle" class="menu-toggle" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-title-main">RATNIK</span>
+        <span class="hero-title-sub" data-i18n="hero.subtitle">MMA KLUB SARAJEVO</span>
+      </h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">Budi ratnik. Treniraj sa najboljima.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Započni trening</a>
+        <a href="#programs" class="btn btn-outline" data-i18n="hero.ctaSecondary">Pogledaj programe</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="about.title">O nama</h2>
+      <div class="section-divider"></div>
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <p data-i18n="about.text1">MMA Klub Ratnik je osnovan u Dobrinja, Sarajevo sa ciljem promocije borilačkih vještina i zdravog načina života. Naš klub okuplja borce svih uzrasta i nivoa iskustva, od potpunih početnika do iskusnih takmičara.</p>
+          <p data-i18n="about.text2">Posvećeni smo razvoju svakog pojedinca — fizički i mentalno. Bilo da želite naučiti osnove samoodbrane, poboljšati kondiciju, ili se pripremiti za takmičenja, kod nas ćete naći pravi program i podršku.</p>
+        </div>
+        <div class="about-stats animate-on-scroll">
+          <div class="stat-item">
+            <span class="stat-number" data-count="3">0</span><span>+</span>
+            <span class="stat-label" data-i18n="about.statYears">Godina iskustva</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="5">0</span>
+            <span class="stat-label" data-i18n="about.statPrograms">Programa</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-count="100">0</span><span>+</span>
+            <span class="stat-label" data-i18n="about.statMembers">Aktivnih članova</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROGRAMS ========== -->
+  <section id="programs" class="section programs">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="programs.title">Programi</h2>
+      <div class="section-divider"></div>
+      <div class="programs-grid">
+
+        <div class="program-card animate-on-scroll">
+          <div class="program-icon"><i class="fas fa-fist-raised"></i></div>
+          <h3 class="program-name" data-i18n="programs.mma.name">MMA muška grupa</h3>
+          <p class="program-desc" data-i18n="programs.mma.desc">Kompletni MMA trening koji obuhvata striking, wrestling i grappling tehnike za muškarce svih nivoa.</p>
+          <a href="#contact" class="program-link" data-i18n="programs.cta">Saznaj više →</a>
+        </div>
+
+        <div class="program-card animate-on-scroll">
+          <div class="program-icon"><i class="fas fa-hand-rock"></i></div>
+          <h3 class="program-name" data-i18n="programs.kickbox.name">Ženska grupa kickboxa</h3>
+          <p class="program-desc" data-i18n="programs.kickbox.desc">Dinamični kickbox treninzi prilagođeni ženama, fokus na tehnici, kondiciji i samoodbrani.</p>
+          <a href="#contact" class="program-link" data-i18n="programs.cta">Saznaj više →</a>
+        </div>
+
+        <div class="program-card animate-on-scroll">
+          <div class="program-icon"><i class="fas fa-user-shield"></i></div>
+          <h3 class="program-name" data-i18n="programs.bjj.name">Ženska grupa BJJ</h3>
+          <p class="program-desc" data-i18n="programs.bjj.desc">Brazilian Jiu-Jitsu program za žene — naučite tehnike na podu u podržavajućem okruženju.</p>
+          <a href="#contact" class="program-link" data-i18n="programs.cta">Saznaj više →</a>
+        </div>
+
+        <div class="program-card animate-on-scroll">
+          <div class="program-icon"><i class="fas fa-child"></i></div>
+          <h3 class="program-name" data-i18n="programs.kids.name">Dječija grupa</h3>
+          <p class="program-desc" data-i18n="programs.kids.desc">Zabavni i sigurni treninzi za djecu koji razvijaju disciplinu, koordinaciju i samopouzdanje.</p>
+          <a href="#contact" class="program-link" data-i18n="programs.cta">Saznaj više →</a>
+        </div>
+
+        <div class="program-card animate-on-scroll">
+          <div class="program-icon"><i class="fas fa-dumbbell"></i></div>
+          <h3 class="program-name" data-i18n="programs.functional.name">Funkcionalni treninzi</h3>
+          <p class="program-desc" data-i18n="programs.functional.desc">Intenzivni funkcionalni treninzi za poboljšanje snage, izdržljivosti i općeg fitnesa.</p>
+          <a href="#contact" class="program-link" data-i18n="programs.cta">Saznaj više →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SCHEDULE ========== -->
+  <section id="schedule" class="section schedule">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="schedule.title">Raspored</h2>
+      <div class="section-divider"></div>
+      <div class="schedule-wrapper animate-on-scroll">
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th data-i18n="schedule.program">Program</th>
+              <th data-i18n="schedule.mon">Pon</th>
+              <th data-i18n="schedule.tue">Uto</th>
+              <th data-i18n="schedule.wed">Sri</th>
+              <th data-i18n="schedule.thu">Čet</th>
+              <th data-i18n="schedule.fri">Pet</th>
+              <th data-i18n="schedule.sat">Sub</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-i18n="schedule.mmaName">MMA muška</td>
+              <td class="time-active">19:00 - 20:30</td>
+              <td>-</td>
+              <td class="time-active">19:00 - 20:30</td>
+              <td>-</td>
+              <td class="time-active">19:00 - 20:30</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td data-i18n="schedule.kickboxName">Kickbox ženska</td>
+              <td>-</td>
+              <td class="time-active">18:00 - 19:00</td>
+              <td>-</td>
+              <td class="time-active">18:00 - 19:00</td>
+              <td>-</td>
+              <td class="time-active">10:00 - 11:00</td>
+            </tr>
+            <tr>
+              <td data-i18n="schedule.bjjName">BJJ ženska</td>
+              <td class="time-active">18:00 - 19:00</td>
+              <td>-</td>
+              <td class="time-active">18:00 - 19:00</td>
+              <td>-</td>
+              <td>-</td>
+              <td class="time-active">11:00 - 12:00</td>
+            </tr>
+            <tr>
+              <td data-i18n="schedule.kidsName">Dječija</td>
+              <td class="time-active">17:00 - 18:00</td>
+              <td class="time-active">17:00 - 18:00</td>
+              <td class="time-active">17:00 - 18:00</td>
+              <td>-</td>
+              <td class="time-active">17:00 - 18:00</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td data-i18n="schedule.functionalName">Funkcionalni</td>
+              <td>-</td>
+              <td class="time-active">19:00 - 20:00</td>
+              <td>-</td>
+              <td class="time-active">19:00 - 20:00</td>
+              <td>-</td>
+              <td class="time-active">09:00 - 10:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="schedule-note" data-i18n="schedule.note">* Raspored je podložan promjenama. Kontaktirajte nas za potvrdu.</p>
+    </div>
+  </section>
+
+  <!-- ========== TRAINERS ========== -->
+  <section id="trainers" class="section trainers">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="trainers.title">Treneri</h2>
+      <div class="section-divider"></div>
+      <div class="trainers-grid">
+
+        <div class="trainer-card animate-on-scroll">
+          <div class="trainer-placeholder"><i class="fas fa-user"></i></div>
+          <h3 class="trainer-name" data-i18n="trainers.t1.name">Trener 1</h3>
+          <p class="trainer-role" data-i18n="trainers.t1.role">Glavni trener MMA</p>
+          <p class="trainer-bio" data-i18n="trainers.t1.bio">Iskusan borac i trener sa višegodišnjim iskustvom u mješovitim borilačkim vještinama.</p>
+        </div>
+
+        <div class="trainer-card animate-on-scroll">
+          <div class="trainer-placeholder"><i class="fas fa-user"></i></div>
+          <h3 class="trainer-name" data-i18n="trainers.t2.name">Trener 2</h3>
+          <p class="trainer-role" data-i18n="trainers.t2.role">Trener kickboxa</p>
+          <p class="trainer-bio" data-i18n="trainers.t2.bio">Certificirani kickbox instruktor sa strašću za podučavanje i motivaciju.</p>
+        </div>
+
+        <div class="trainer-card animate-on-scroll">
+          <div class="trainer-placeholder"><i class="fas fa-user"></i></div>
+          <h3 class="trainer-name" data-i18n="trainers.t3.name">Trener 3</h3>
+          <p class="trainer-role" data-i18n="trainers.t3.role">Trener BJJ</p>
+          <p class="trainer-bio" data-i18n="trainers.t3.bio">Brazilian Jiu-Jitsu stručnjak posvećen razvoju tehničkih vještina svakog člana.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="gallery.title">Galerija</h2>
+      <div class="section-divider"></div>
+      <div class="gallery-grid animate-on-scroll">
+        <div class="gallery-item" data-index="0">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.training">Trening</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="1">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.sparring">Sparring</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="2">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.competition">Takmičenje</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="3">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.team">Tim</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="4">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.gym">Sala</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-index="5">
+          <div class="gallery-placeholder">
+            <i class="fas fa-image"></i>
+            <span data-i18n="gallery.kids">Dječiji trening</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll" data-i18n="contact.title">Kontakt</h2>
+      <div class="section-divider"></div>
+      <div class="contact-grid">
+
+        <div class="contact-form-wrapper animate-on-scroll">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" data-i18n="contact.name">Ime i prezime</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="contact.email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="phone" data-i18n="contact.phone">Telefon</label>
+              <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+              <label for="program" data-i18n="contact.program">Program</label>
+              <select id="program" name="program">
+                <option value="" data-i18n="contact.selectProgram">Izaberi program</option>
+                <option value="mma" data-i18n="contact.optMma">MMA muška grupa</option>
+                <option value="kickbox" data-i18n="contact.optKickbox">Ženska grupa kickboxa</option>
+                <option value="bjj" data-i18n="contact.optBjj">Ženska grupa BJJ</option>
+                <option value="kids" data-i18n="contact.optKids">Dječija grupa</option>
+                <option value="functional" data-i18n="contact.optFunctional">Funkcionalni treninzi</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="contact.message">Poruka</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" data-i18n="contact.submit">Pošalji</button>
+          </form>
+          <div id="formSuccess" class="form-success" hidden>
+            <i class="fas fa-check-circle"></i>
+            <p data-i18n="contact.success">Hvala! Vaša poruka je poslana.</p>
+          </div>
+        </div>
+
+        <div class="contact-info animate-on-scroll">
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4 data-i18n="contact.addressLabel">Adresa</h4>
+              <p>Dobrinjske bolnice br. 17<br>Dobrinja, Sarajevo</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fab fa-instagram"></i>
+            <div>
+              <h4>Instagram</h4>
+              <a href="https://instagram.com/klub_ratnik_sarajevo" target="_blank" rel="noopener">@klub_ratnik_sarajevo</a>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4 data-i18n="contact.hoursLabel">Radno vrijeme</h4>
+              <p data-i18n="contact.hours">Pon - Pet: 17:00 - 21:00<br>Sub: 09:00 - 12:00</p>
+            </div>
+          </div>
+
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.5!2d18.3394!3d43.8256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQ5JzMyLjIiTiAxOMKwMjAnMjEuOCJF!5e0!3m2!1sbs!2sba!4v1709000000000"
+              width="100%" height="300" style="border:0;"
+              allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="MMA Klub Ratnik lokacija">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-text">RATNIK</span>
+          <p data-i18n="footer.tagline">MMA Klub Sarajevo</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://instagram.com/klub_ratnik_sarajevo" target="_blank" rel="noopener" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; 2026 MMA Klub Ratnik. <span data-i18n="footer.rights">Sva prava zadržana.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== LIGHTBOX ========== -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <div class="lightbox-image-container">
+        <i class="fas fa-image"></i>
+      </div>
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
