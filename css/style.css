@@ -1068,12 +1068,15 @@ h1, h2, h3, h4, h5, h6 {
     gap: 25px;
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-normal);
+    pointer-events: none;
+    z-index: 999;
+    transition: opacity var(--transition-normal), visibility var(--transition-normal);
   }
 
   .nav-links.active {
     opacity: 1;
     visibility: visible;
+    pointer-events: auto;
   }
 
   .nav-links a {
