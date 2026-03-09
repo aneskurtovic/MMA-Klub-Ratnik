@@ -31,6 +31,39 @@
   --navbar-height: 70px;
 }
 
+/* --- Accessibility --- */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-accent);
+  color: #fff;
+  padding: 10px 20px;
+  z-index: 9999;
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+  top: 0;
+  color: #fff;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* --- Reset & Base --- */
 *,
 *::before,
@@ -869,6 +902,11 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--color-accent-light);
 }
 
+.form-error {
+  color: var(--color-accent-light);
+  font-size: 0.8rem;
+}
+
 .form-group select {
   cursor: pointer;
   appearance: none;
@@ -1157,5 +1195,35 @@ h1, h2, h3, h4, h5, h6 {
 
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* --- Focus Visible --- */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.5);
+}
+
+/* --- Reduced Motion --- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll {
+    opacity: 1;
+    transform: none;
   }
 }

@@ -60,7 +60,8 @@ const translations = {
       bjjName: "BJJ ženska",
       kidsName: "Dječija",
       functionalName: "Funkcionalni",
-      note: "* Raspored je podložan promjenama. Kontaktirajte nas za potvrdu."
+      note: "* Raspored je podložan promjenama. Kontaktirajte nas za potvrdu.",
+      caption: "Sedmični raspored treninga"
     },
     trainers: {
       title: "Treneri",
@@ -104,6 +105,9 @@ const translations = {
       message: "Poruka",
       submit: "Pošalji",
       success: "Hvala! Vaša poruka je poslana.",
+      errorName: "Unesite ime i prezime",
+      errorEmail: "Unesite ispravnu email adresu",
+      errorMessage: "Unesite poruku",
       addressLabel: "Adresa",
       hoursLabel: "Radno vrijeme",
       hours: "Pon - Pet: 17:00 - 21:00\nSub: 09:00 - 12:00"
@@ -175,7 +179,8 @@ const translations = {
       bjjName: "Women's BJJ",
       kidsName: "Children's",
       functionalName: "Functional",
-      note: "* Schedule is subject to change. Contact us for confirmation."
+      note: "* Schedule is subject to change. Contact us for confirmation.",
+      caption: "Weekly training schedule"
     },
     trainers: {
       title: "Trainers",
@@ -219,6 +224,9 @@ const translations = {
       message: "Message",
       submit: "Send",
       success: "Thank you! Your message has been sent.",
+      errorName: "Please enter your full name",
+      errorEmail: "Please enter a valid email address",
+      errorMessage: "Please enter a message",
       addressLabel: "Address",
       hoursLabel: "Working hours",
       hours: "Mon - Fri: 17:00 - 21:00\nSat: 09:00 - 12:00"

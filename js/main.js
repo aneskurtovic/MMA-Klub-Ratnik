@@ -17,6 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
       if (value !== null) {
         if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
           el.placeholder = value;
+        } else if (value.indexOf('\n') !== -1) {
+          el.innerHTML = value.replace(/\n/g, '<br>');
         } else {
           el.textContent = value;
         }
@@ -92,15 +94,17 @@ document.addEventListener('DOMContentLoaded', function() {
   var navLinks = document.getElementById('navLinks');
 
   menuToggle.addEventListener('click', function() {
-    menuToggle.classList.toggle('active');
+    var isOpen = menuToggle.classList.toggle('active');
     navLinks.classList.toggle('active');
     document.body.classList.toggle('menu-open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
   });
 
   function closeMobileMenu() {
     menuToggle.classList.remove('active');
     navLinks.classList.remove('active');
     document.body.classList.remove('menu-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
   }
 
   // ==========================================
@@ -169,25 +173,39 @@ document.addEventListener('DOMContentLoaded', function() {
   var lightboxCaption = lightbox.querySelector('.lightbox-caption');
   var lightboxImageContainer = lightbox.querySelector('.lightbox-image-container');
   var currentIndex = 0;
+  var lightboxTrigger = null;
 
   galleryItems.forEach(function(item, index) {
     item.addEventListener('click', function() {
       currentIndex = index;
       openLightbox();
     });
+    item.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        currentIndex = index;
+        openLightbox();
+      }
+    });
   });
 
   function openLightbox() {
+    lightboxTrigger = document.activeElement;
     lightbox.classList.add('active');
     lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
     updateLightboxContent();
+    lightbox.querySelector('.lightbox-close').focus();
   }
 
   function closeLightbox() {
     lightbox.classList.remove('active');
     lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (lightboxTrigger) {
+      lightboxTrigger.focus();
+      lightboxTrigger = null;
+    }
   }
 
   function updateLightboxContent() {
@@ -222,7 +240,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Keyboard navigation
+  // Keyboard navigation + focus trap
   document.addEventListener('keydown', function(e) {
     if (!lightbox.classList.contains('active')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -233,6 +251,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.key === 'ArrowRight') {
       currentIndex = (currentIndex + 1) % galleryItems.length;
       updateLightboxContent();
+    }
+    if (e.key === 'Tab') {
+      var focusable = lightbox.querySelectorAll('button');
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
     }
   });
 
@@ -252,22 +282,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // Clear previous errors
     contactForm.querySelectorAll('.error').forEach(function(el) {
       el.classList.remove('error');
+      el.removeAttribute('aria-invalid');
+    });
+    contactForm.querySelectorAll('.form-error').forEach(function(el) {
+      el.hidden = true;
     });
 
     var valid = true;
 
     if (!nameInput.value.trim()) {
       nameInput.classList.add('error');
+      nameInput.setAttribute('aria-invalid', 'true');
+      document.getElementById('name-error').hidden = false;
       valid = false;
     }
 
     if (!emailInput.value.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value)) {
       emailInput.classList.add('error');
+      emailInput.setAttribute('aria-invalid', 'true');
+      document.getElementById('email-error').hidden = false;
       valid = false;
     }
 
     if (!messageInput.value.trim()) {
       messageInput.classList.add('error');
+      messageInput.setAttribute('aria-invalid', 'true');
+      document.getElementById('message-error').hidden = false;
       valid = false;
     }
 
