@@ -355,7 +355,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0A0A0A 0%, #1A0505 40%, #0D0000 60%, #0A0A0A 100%);
+  background: #0A0A0A;
   overflow: hidden;
 }
 
@@ -366,8 +366,9 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(220, 38, 38, 0.05) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 2;
 }
 
 .hero-overlay {
@@ -376,8 +377,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('') center/cover no-repeat;
-  opacity: 0.3;
+  background: url('../images/background.png') center/cover no-repeat;
+  opacity: 0.45;
 }
 
 .hero-content {
