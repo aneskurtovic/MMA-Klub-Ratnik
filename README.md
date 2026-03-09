@@ -4,13 +4,7 @@ Website za MMA Klub Ratnik — Dobrinja, Sarajevo.
 
 ## Pokretanje / How to Run
 
-Otvorite `index.html` u web pregledniku ili pokrenite lokalni server:
-
-```bash
-python3 -m http.server 8000
-```
-
-Zatim otvorite http://localhost:8000
+Otvorite `index.html` direktno u web pregledniku — nema build koraka, nema zavisnosti.
 
 ## Struktura / Structure
 

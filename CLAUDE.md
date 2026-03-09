@@ -4,12 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Dev Commands
 
-```bash
-python3 -m http.server 8000   # Start local server (http://localhost:8000)
-# Or simply open index.html directly in a browser
-```
-
-No build step, package manager, or dependencies required — pure static site.
+Open `index.html` directly in a browser — no build step, no server, no dependencies.
 
 ## Architecture
 
