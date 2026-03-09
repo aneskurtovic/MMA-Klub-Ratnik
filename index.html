@@ -61,6 +61,9 @@
   }
   </script>
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%230A0A0A'/%3E%3Ctext x='16' y='24' font-family='Arial,sans-serif' font-weight='bold' font-size='22' fill='%23DC2626' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -89,7 +92,8 @@
         <li><a href="#programs" data-i18n="nav.programs">Programi</a></li>
         <li><a href="#schedule" data-i18n="nav.schedule">Raspored</a></li>
         <li><a href="#trainers" data-i18n="nav.trainers">Treneri</a></li>
-        <li><a href="#gallery" data-i18n="nav.gallery">Galerija</a></li>
+        <!-- Gallery hidden until real photos available -->
+        <!-- <li><a href="#gallery" data-i18n="nav.gallery">Galerija</a></li> -->
         <li><a href="#contact" data-i18n="nav.contact">Kontakt</a></li>
       </ul>
 
@@ -303,51 +307,11 @@
     </div>
   </section>
 
-  <!-- ========== GALLERY ========== -->
+  <!-- Gallery section hidden until real photos are available
   <section id="gallery" class="section gallery">
-    <div class="container">
-      <h2 class="section-title animate-on-scroll" data-i18n="gallery.title">Galerija</h2>
-      <div class="section-divider"></div>
-      <div class="gallery-grid animate-on-scroll">
-        <div class="gallery-item" role="button" tabindex="0" data-index="0">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.training">Trening</span>
-          </div>
-        </div>
-        <div class="gallery-item" role="button" tabindex="0" data-index="1">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.sparring">Sparring</span>
-          </div>
-        </div>
-        <div class="gallery-item" role="button" tabindex="0" data-index="2">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.competition">Takmičenje</span>
-          </div>
-        </div>
-        <div class="gallery-item" role="button" tabindex="0" data-index="3">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.team">Tim</span>
-          </div>
-        </div>
-        <div class="gallery-item" role="button" tabindex="0" data-index="4">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.gym">Sala</span>
-          </div>
-        </div>
-        <div class="gallery-item" role="button" tabindex="0" data-index="5">
-          <div class="gallery-placeholder">
-            <i class="fas fa-image"></i>
-            <span data-i18n="gallery.kids">Dječiji trening</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    ...
   </section>
+  -->
 
   <!-- ========== CONTACT ========== -->
   <section id="contact" class="section contact">
@@ -435,6 +399,11 @@
   </section>
 
   </main>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">

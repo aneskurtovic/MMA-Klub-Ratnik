@@ -189,7 +189,8 @@ h1, h2, h3, h4, h5, h6 {
   right: 0;
   height: var(--navbar-height);
   z-index: 1000;
-  transition: background-color var(--transition-normal), box-shadow var(--transition-normal);
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0.6), transparent);
+  transition: background var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .navbar--scrolled {
@@ -496,9 +497,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .programs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 25px;
+  justify-content: center;
+}
+
+.programs-grid .program-card {
+  flex: 0 1 calc(33.333% - 17px);
+  min-width: 220px;
 }
 
 .program-card {
@@ -1037,6 +1044,41 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.8rem;
 }
 
+/* --- Back to Top --- */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition-normal), visibility var(--transition-normal), transform var(--transition-normal), background var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: var(--color-accent-light);
+  box-shadow: 0 4px 20px rgba(220, 38, 38, 0.4);
+}
+
 /* --- Scroll Animations --- */
 .animate-on-scroll {
   opacity: 0;
@@ -1099,7 +1141,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(10, 10, 10, 0.98);
+    background: #0A0A0A;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1150,10 +1192,9 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   /* Programs */
-  .programs-grid {
-    grid-template-columns: 1fr;
+  .programs-grid .program-card {
+    flex: 0 1 100%;
     max-width: 400px;
-    margin: 0 auto;
   }
 
   /* Trainers */

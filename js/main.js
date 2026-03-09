@@ -170,6 +170,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // ==========================================
   var lightbox = document.getElementById('lightbox');
   var galleryItems = document.querySelectorAll('.gallery-item');
+  if (!lightbox || galleryItems.length === 0) {
+    // Gallery section hidden — skip lightbox setup
+  } else {
   var lightboxCaption = lightbox.querySelector('.lightbox-caption');
   var lightboxImageContainer = lightbox.querySelector('.lightbox-image-container');
   var currentIndex = 0;
@@ -265,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
+  } // end gallery/lightbox guard
 
   // ==========================================
   // 8. CONTACT FORM HANDLING
@@ -324,7 +328,39 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // ==========================================
-  // 9. ACTIVE NAV LINK HIGHLIGHTING
+  // 9. CLEAR FORM ERRORS ON INPUT
+  // ==========================================
+  ['name', 'email', 'message'].forEach(function(fieldId) {
+    var field = document.getElementById(fieldId);
+    if (field) {
+      field.addEventListener('input', function() {
+        field.classList.remove('error');
+        field.removeAttribute('aria-invalid');
+        var errorEl = document.getElementById(fieldId + '-error');
+        if (errorEl) errorEl.hidden = true;
+      });
+    }
+  });
+
+  // ==========================================
+  // 10. BACK TO TOP BUTTON
+  // ==========================================
+  var backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ==========================================
+  // 11. ACTIVE NAV LINK HIGHLIGHTING
   // ==========================================
   var sections = document.querySelectorAll('section[id]');
   var navLinksAll = document.querySelectorAll('.nav-links a');
