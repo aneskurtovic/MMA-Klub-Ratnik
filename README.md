@@ -1,39 +1,39 @@
 # MMA Klub Ratnik
 
-Website za MMA Klub Ratnik — Dobrinja, Sarajevo.
+Website for MMA Klub Ratnik — Dobrinja, Sarajevo.
 
-## Pokretanje / How to Run
+## How to Run
 
-Otvorite `index.html` direktno u web pregledniku — nema build koraka, nema zavisnosti.
+Open `index.html` directly in a browser — no build step, no server, no dependencies.
 
-## Struktura / Structure
+## Structure
 
 ```
-├── index.html          # Glavna stranica (svi sekcije)
-├── css/style.css       # Stilovi, responsive dizajn
-├── js/translations.js  # Dvojezični sadržaj (BS/EN)
-├── js/main.js          # Interaktivnost
-└── images/             # Slike (dodati kasnije)
+├── index.html          # Main page (all sections)
+├── css/style.css       # Styles, responsive design
+├── js/translations.js  # Bilingual content (BS/EN)
+├── js/main.js          # Interactivity
+└── images/             # Images (to be added)
 ```
 
-## Funkcionalnosti / Features
+## Features
 
-- Responsive dizajn (mobile-first)
-- Dvojezičnost: Bosanski / English
-- Sekcije: Hero, O nama, Programi, Raspored, Treneri, Galerija, Kontakt
-- Scroll animacije
-- Galerija sa lightbox-om
-- Kontakt forma (frontend only)
+- Responsive design (mobile-first)
+- Bilingual: Bosnian / English
+- Sections: Hero, About, Programs, Schedule, Trainers, Gallery, Contact
+- Scroll animations
+- Gallery with lightbox
+- Contact form (frontend only)
 
-## Programi / Programs
+## Programs
 
-- MMA muška grupa
-- Ženska grupa kickboxa
-- Ženska grupa BJJ
-- Dječija grupa
-- Funkcionalni treninzi
+- Men's MMA
+- Women's Kickboxing
+- Women's BJJ
+- Children's Program
+- Functional Training
 
-## Lokacija / Location
+## Location
 
 Dobrinjske bolnice br. 17, Dobrinja, Sarajevo
 
