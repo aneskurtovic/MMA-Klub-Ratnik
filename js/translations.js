@@ -1,53 +1,80 @@
 const translations = {
   bs: {
+    a11y: {
+      skipLink: "Preskoči na sadržaj"
+    },
     nav: {
       about: "O nama",
       programs: "Programi",
       schedule: "Raspored",
-      trainers: "Treneri",
-      gallery: "Galerija",
-      contact: "Kontakt"
+      trial: "Probni trening",
+      faq: "Pitanja",
+      contact: "Kontakt",
+      cta: "Probni trening"
     },
     hero: {
-      subtitle: "MMA KLUB SARAJEVO",
-      tagline: "Budi ratnik. Treniraj sa najboljima.",
-      cta: "Započni trening",
-      ctaSecondary: "Pogledaj programe"
+      eyebrow: "Borilački klub · Dobrinja, Sarajevo",
+      line1: "Treniraj kao ratnik.",
+      line2: "Počni kao početnik.",
+      tagline: "MMA, kickboxing i BJJ. Otvoreno za početnike, ozbiljno za takmičare.",
+      cta: "Zakazati probni trening",
+      ctaSecondary: "Vidi programe",
+      micro: "Prvi trening je besplatan · Odgovaramo u roku od 2h"
+    },
+    trust: {
+      years: "godine rada",
+      programs: "programa",
+      members: "aktivnih članova",
+      response: "vrijeme odgovora",
+      responseValue: "< 2h"
     },
     about: {
-      title: "O nama",
-      text1: "MMA Klub Ratnik je osnovan u Dobrinja, Sarajevo sa ciljem promocije borilačkih vještina i zdravog načina života. Naš klub okuplja borce svih uzrasta i nivoa iskustva, od potpunih početnika do iskusnih takmičara.",
-      text2: "Posvećeni smo razvoju svakog pojedinca — fizički i mentalno. Bilo da želite naučiti osnove samoodbrane, poboljšati kondiciju, ili se pripremiti za takmičenja, kod nas ćete naći pravi program i podršku.",
-      statYears: "Godina iskustva",
-      statPrograms: "Programa",
-      statMembers: "Aktivnih članova"
+      eyebrow: "O klubu",
+      title: "Borilački klub u srcu Dobrinje",
+      text1: "Ratnik je borilački klub u Dobrinji, Sarajevo. Treniramo MMA, kickboxing i BJJ, vodimo dječiju i žensku grupu, i primamo i potpune početnike i takmičare.",
+      text2: "Radimo bez ega i bez predstave. Tehnika, disciplina, rad. Ako tražiš mjesto gdje se uči ozbiljno a tretira se čovjek — ovo je klub.",
+      text3: "Prvi trening je besplatan. Dođi, vidi salu, upoznaj ekipu i odluči.",
+      pillar1Title: "Sigurno za početnike",
+      pillar1Text: "Uvod korak-po-korak. Niko te ne baca u spar prvi dan.",
+      pillar2Title: "Odvojene grupe",
+      pillar2Text: "Muške, ženske, dječije. Tempo i tehnika prilagođeni grupi.",
+      pillar3Title: "Ozbiljno za takmičare",
+      pillar3Text: "Ako želiš u ring ili na strunjaču — pripremićemo te."
     },
     programs: {
-      title: "Programi",
+      eyebrow: "Programi",
+      title: "Izaberi svoj trening",
+      subtitle: "Pet programa, odvojene grupe, različiti nivoi iskustva — od prvog treninga do takmičarske pripreme.",
+      cta: "Prijavi se",
       mma: {
-        name: "MMA muška grupa",
-        desc: "Kompletni MMA trening koji obuhvata striking, wrestling i grappling tehnike za muškarce svih nivoa."
+        tag: "Za muškarce · svi nivoi",
+        name: "MMA",
+        desc: "Striking, rvanje, grappling. Kompletni MMA trening za muškarce — od prvog dana do takmičarskog nivoa."
       },
       kickbox: {
-        name: "Ženska grupa kickboxa",
-        desc: "Dinamični kickbox treninzi prilagođeni ženama, fokus na tehnici, kondiciji i samoodbrani."
+        tag: "Samo za žene",
+        name: "Ženski kickboxing",
+        desc: "Tehnika, kondicija, samoodbrana. Dinamičan trening u ženskoj grupi, bez pritiska i bez publike."
       },
       bjj: {
-        name: "Ženska grupa BJJ",
-        desc: "Brazilian Jiu-Jitsu program za žene — naučite tehnike na podu u podržavajućem okruženju."
+        tag: "Samo za žene",
+        name: "Ženski BJJ",
+        desc: "Brazilian Jiu-Jitsu za žene. Rad na strunjači, poluge, kontrola — u sigurnoj i podržavajućoj grupi."
       },
       kids: {
+        tag: "Djeca 7–14",
         name: "Dječija grupa",
-        desc: "Zabavni i sigurni treninzi za djecu koji razvijaju disciplinu, koordinaciju i samopouzdanje."
+        desc: "Disciplina, koordinacija, samopouzdanje. Bez tvrdog kontakta — fokus na igru, tehniku i sigurnost."
       },
       functional: {
-        name: "Funkcionalni treninzi",
-        desc: "Intenzivni funkcionalni treninzi za poboljšanje snage, izdržljivosti i općeg fitnesa."
-      },
-      cta: "Saznaj više →"
+        tag: "Otvoreno za sve",
+        name: "Funkcionalni trening",
+        desc: "Snaga, izdržljivost, eksplozivnost. Kondicijska baza — radi samostalno ili uz borilački program."
+      }
     },
     schedule: {
-      title: "Raspored",
+      eyebrow: "Raspored",
+      title: "Sedmični raspored treninga",
       program: "Program",
       mon: "Pon",
       tue: "Uto",
@@ -55,118 +82,171 @@ const translations = {
       thu: "Čet",
       fri: "Pet",
       sat: "Sub",
+      mondayFull: "Ponedjeljak",
+      tuesdayFull: "Utorak",
+      wednesdayFull: "Srijeda",
+      thursdayFull: "Četvrtak",
+      fridayFull: "Petak",
+      saturdayFull: "Subota",
       mmaName: "MMA muška",
       kickboxName: "Kickbox ženska",
       bjjName: "BJJ ženska",
       kidsName: "Dječija",
       functionalName: "Funkcionalni",
-      note: "* Raspored je podložan promjenama. Kontaktirajte nas za potvrdu.",
+      note: "* Raspored je podložan promjenama. Kontaktirajte nas za potvrdu termina.",
       caption: "Sedmični raspored treninga"
     },
-    trainers: {
-      title: "Treneri",
-      t1: {
-        name: "Trener 1",
-        role: "Glavni trener MMA",
-        bio: "Iskusan borac i trener sa višegodišnjim iskustvom u mješovitim borilačkim vještinama."
-      },
-      t2: {
-        name: "Trener 2",
-        role: "Trener kickboxa",
-        bio: "Certificirani kickbox instruktor sa strašću za podučavanje i motivaciju."
-      },
-      t3: {
-        name: "Trener 3",
-        role: "Trener BJJ",
-        bio: "Brazilian Jiu-Jitsu stručnjak posvećen razvoju tehničkih vještina svakog člana."
-      }
+    trial: {
+      eyebrow: "Prvi trening",
+      title: "Prvi trening je besplatan. Ostalo zavisi od tebe.",
+      text: "Dođi 15 minuta ranije. Ponesi vodu i udobnu odjeću. Mi se brinemo za sve ostalo — opremu, tehniku, tempo. Bez obaveze nakon prvog treninga.",
+      cta: "Zakazati probni trening",
+      whatsapp: "Piši na WhatsApp",
+      check1: "Bez obaveze",
+      check2: "Oprema nije potrebna",
+      check3: "Odgovor u roku 2h",
+      check4: "Parking ispred sale"
     },
-    gallery: {
-      title: "Galerija",
-      training: "Trening",
-      sparring: "Sparring",
-      competition: "Takmičenje",
-      team: "Tim",
-      gym: "Sala",
-      kids: "Dječiji trening"
+    trainers: {
+      eyebrow: "Tim",
+      title: "Treneri",
+      dejanRole: "Glavni MMA trener",
+      dejanBio: "Glavni MMA trener kluba. Fokus na tehnici, kondiciji i sigurnoj borilačkoj pripremi — od početnika do takmičara.",
+      darioRole: "Kickbox trener",
+      darioBio: "Kickbox trener zadužen za razvoj udarne tehnike i borbene kontrole. Rad sa svim nivoima — od osnova do sparinga.",
+      more: "Uskoro predstavljamo i ostatak tima — BJJ, dječiji program i funkcionalni trening."
+    },
+    faq: {
+      eyebrow: "Česta pitanja",
+      title: "Ono što te zanima prije prvog treninga",
+      q1: "Nikad nisam trenirao borilačke vještine. Mogu li početi?",
+      a1: "Da. Većina naših članova je počela bez prethodnog iskustva. Prvi trening je prilagođen početnicima — naučimo te osnovama i prilagodimo tempo tvom nivou kondicije.",
+      q2: "Da li je prvi trening besplatan?",
+      a2: "Da. Prvi probni trening je besplatan i bez obaveze. Samo nas kontaktiraj da dogovorimo termin.",
+      q3: "Šta da ponesem na prvi trening?",
+      a3: "Udobnu sportsku odjeću, vodu i peškir. Opremu (rukavice, štitnike) ne trebaš na prvom treningu — nabavljaš je kad si siguran da ostaješ.",
+      q4: "Koliko godina dijete treba da ima za dječiju grupu?",
+      a4: "Dječija grupa je otvorena za uzrast 7–14 godina. Fokus je na disciplini, koordinaciji i samopouzdanju — ne na kontaktu.",
+      q5: "Postoje li odvojene ženske grupe?",
+      a5: "Da. Ženska grupa kickboxa i ženska grupa BJJ treniraju odvojeno, u sigurnom i podržavajućem okruženju.",
+      q6: "Da li moram biti u formi da bih počeo?",
+      a6: "Ne. Dolaze ljudi svih nivoa kondicije. Trening gradi formu kroz rad — ne tražimo od tebe da budeš spreman prije nego što počneš."
     },
     contact: {
-      title: "Kontakt",
+      eyebrow: "Kontakt",
+      title: "Zakazati trening",
+      subtitle: "Pošalji poruku ili piši direktno — odgovaramo u roku od 2 sata u radno vrijeme.",
+      chipWhatsapp: "WhatsApp",
+      chipPhone: "Nazovi",
+      chipInstagram: "Instagram",
       name: "Ime i prezime",
       email: "Email",
-      phone: "Telefon",
+      phone: "Telefon (opciono)",
       program: "Program",
       selectProgram: "Izaberi program",
       optMma: "MMA muška grupa",
-      optKickbox: "Ženska grupa kickboxa",
-      optBjj: "Ženska grupa BJJ",
+      optKickbox: "Ženski kickboxing",
+      optBjj: "Ženski BJJ",
       optKids: "Dječija grupa",
-      optFunctional: "Funkcionalni treninzi",
+      optFunctional: "Funkcionalni trening",
       message: "Poruka",
       submit: "Pošalji",
-      success: "Hvala! Vaša poruka je poslana.",
+      responseNote: "Odgovaramo u roku od 2h u radno vrijeme.",
+      successTitle: "Poruka poslana",
+      success: "Javljamo se u roku od 2h. Do tada — zagrijavaj se.",
       errorName: "Unesite ime i prezime",
       errorEmail: "Unesite ispravnu email adresu",
       errorMessage: "Unesite poruku",
+      errorSubmit: "Slanje nije uspjelo. Pokušaj ponovo ili nam piši direktno na WhatsApp.",
       addressLabel: "Adresa",
       hoursLabel: "Radno vrijeme",
-      hours: "Pon - Pet: 17:00 - 21:00\nSub: 09:00 - 12:00"
+      hours: "Pon – Pet: 17:00 – 21:00\nSub: 09:00 – 12:00"
+    },
+    sticky: {
+      main: "Probni trening"
     },
     footer: {
-      tagline: "MMA Klub Sarajevo",
+      tagline: "MMA Klub · Dobrinja, Sarajevo",
       rights: "Sva prava zadržana."
     }
   },
 
   en: {
+    a11y: {
+      skipLink: "Skip to content"
+    },
     nav: {
       about: "About",
       programs: "Programs",
       schedule: "Schedule",
-      trainers: "Trainers",
-      gallery: "Gallery",
-      contact: "Contact"
+      trial: "Free trial",
+      faq: "FAQ",
+      contact: "Contact",
+      cta: "Free trial"
     },
     hero: {
-      subtitle: "MMA CLUB SARAJEVO",
-      tagline: "Be a warrior. Train with the best.",
-      cta: "Start Training",
-      ctaSecondary: "View Programs"
+      eyebrow: "Combat sports club · Dobrinja, Sarajevo",
+      line1: "Train like a warrior.",
+      line2: "Start as a beginner.",
+      tagline: "MMA, kickboxing and BJJ. Welcoming for beginners, serious for competitors.",
+      cta: "Book a free trial",
+      ctaSecondary: "View programs",
+      micro: "First class is free · We reply within 2h"
+    },
+    trust: {
+      years: "years running",
+      programs: "programs",
+      members: "active members",
+      response: "reply time",
+      responseValue: "< 2h"
     },
     about: {
-      title: "About Us",
-      text1: "MMA Club Ratnik was founded in Dobrinja, Sarajevo with the goal of promoting martial arts and a healthy lifestyle. Our club brings together fighters of all ages and experience levels, from complete beginners to experienced competitors.",
-      text2: "We are dedicated to developing every individual — physically and mentally. Whether you want to learn the basics of self-defense, improve your fitness, or prepare for competitions, you will find the right program and support with us.",
-      statYears: "Years of experience",
-      statPrograms: "Programs",
-      statMembers: "Active members"
+      eyebrow: "The club",
+      title: "Combat sports club in the heart of Dobrinja",
+      text1: "Ratnik is a combat sports club in Dobrinja, Sarajevo. We train MMA, kickboxing and BJJ, run kids and women's classes, and welcome complete beginners as well as competitors.",
+      text2: "No ego, no show. Technique, discipline, work. If you want a place that teaches seriously and treats people well — this is the club.",
+      text3: "First class is free. Come by, see the gym, meet the team, and decide.",
+      pillar1Title: "Safe for beginners",
+      pillar1Text: "Step-by-step onboarding. Nobody throws you into sparring on day one.",
+      pillar2Title: "Separate groups",
+      pillar2Text: "Men's, women's, kids'. Pace and technique matched to the group.",
+      pillar3Title: "Serious for competitors",
+      pillar3Text: "If you want the ring or the mat — we'll get you ready."
     },
     programs: {
-      title: "Programs",
+      eyebrow: "Programs",
+      title: "Pick your training",
+      subtitle: "Five programs, separate groups, different experience levels — from first class to competition prep.",
+      cta: "Sign up",
       mma: {
-        name: "Men's MMA",
-        desc: "Complete MMA training covering striking, wrestling, and grappling techniques for men of all levels."
+        tag: "For men · all levels",
+        name: "MMA",
+        desc: "Striking, wrestling, grappling. Complete MMA training for men — from day one to competition level."
       },
       kickbox: {
+        tag: "Women only",
         name: "Women's Kickboxing",
-        desc: "Dynamic kickboxing training tailored for women, focusing on technique, conditioning, and self-defense."
+        desc: "Technique, conditioning, self-defense. Dynamic training in a women's group — no pressure, no audience."
       },
       bjj: {
+        tag: "Women only",
         name: "Women's BJJ",
-        desc: "Brazilian Jiu-Jitsu program for women — learn ground techniques in a supportive environment."
+        desc: "Brazilian Jiu-Jitsu for women. Mat work, joint locks, control — in a safe and supportive group."
       },
       kids: {
-        name: "Children's Group",
-        desc: "Fun and safe training for children that develops discipline, coordination, and confidence."
+        tag: "Kids 7–14",
+        name: "Kids class",
+        desc: "Discipline, coordination, confidence. No hard contact — focus on play, technique and safety."
       },
       functional: {
-        name: "Functional Training",
-        desc: "Intensive functional training to improve strength, endurance, and overall fitness."
-      },
-      cta: "Learn more →"
+        tag: "Open to all",
+        name: "Functional training",
+        desc: "Strength, endurance, explosiveness. Conditioning base — on its own or alongside a combat program."
+      }
     },
     schedule: {
-      title: "Schedule",
+      eyebrow: "Schedule",
+      title: "Weekly training schedule",
       program: "Program",
       mon: "Mon",
       tue: "Tue",
@@ -174,65 +254,91 @@ const translations = {
       thu: "Thu",
       fri: "Fri",
       sat: "Sat",
+      mondayFull: "Monday",
+      tuesdayFull: "Tuesday",
+      wednesdayFull: "Wednesday",
+      thursdayFull: "Thursday",
+      fridayFull: "Friday",
+      saturdayFull: "Saturday",
       mmaName: "Men's MMA",
       kickboxName: "Women's Kickboxing",
       bjjName: "Women's BJJ",
-      kidsName: "Children's",
+      kidsName: "Kids",
       functionalName: "Functional",
-      note: "* Schedule is subject to change. Contact us for confirmation.",
+      note: "* Schedule is subject to change. Contact us to confirm a time.",
       caption: "Weekly training schedule"
     },
-    trainers: {
-      title: "Trainers",
-      t1: {
-        name: "Trainer 1",
-        role: "Head MMA Coach",
-        bio: "Experienced fighter and coach with years of experience in mixed martial arts."
-      },
-      t2: {
-        name: "Trainer 2",
-        role: "Kickboxing Coach",
-        bio: "Certified kickboxing instructor with a passion for teaching and motivation."
-      },
-      t3: {
-        name: "Trainer 3",
-        role: "BJJ Coach",
-        bio: "Brazilian Jiu-Jitsu expert dedicated to developing the technical skills of every member."
-      }
+    trial: {
+      eyebrow: "First class",
+      title: "First class is free. The rest is up to you.",
+      text: "Come 15 minutes early. Bring water and comfortable clothes. We handle everything else — gear, technique, pace. No commitment after the first class.",
+      cta: "Book a free trial",
+      whatsapp: "Message on WhatsApp",
+      check1: "No commitment",
+      check2: "No gear required",
+      check3: "Reply within 2h",
+      check4: "Parking at the door"
     },
-    gallery: {
-      title: "Gallery",
-      training: "Training",
-      sparring: "Sparring",
-      competition: "Competition",
-      team: "Team",
-      gym: "Gym",
-      kids: "Kids Training"
+    trainers: {
+      eyebrow: "The team",
+      title: "Coaches",
+      dejanRole: "Head MMA coach",
+      dejanBio: "Head MMA coach of the club. Focus on technique, conditioning and safe combat preparation — from beginner to competitor.",
+      darioRole: "Kickboxing coach",
+      darioBio: "Kickboxing coach in charge of striking technique and fight control. Works with every level — from fundamentals to sparring.",
+      more: "More of the team coming soon — BJJ, kids and functional training."
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "What to know before your first class",
+      q1: "I've never trained combat sports. Can I start?",
+      a1: "Yes. Most of our members started with zero experience. The first class is beginner-friendly — we teach the basics and match the pace to your fitness level.",
+      q2: "Is the first class really free?",
+      a2: "Yes. The first trial class is free and with no commitment. Just reach out and we'll set a time.",
+      q3: "What should I bring to my first class?",
+      a3: "Comfortable workout clothes, water and a towel. You don't need gear (gloves, guards) for the first class — you buy that once you're sure you're staying.",
+      q4: "What's the minimum age for the kids class?",
+      a4: "The kids class is open to ages 7–14. The focus is discipline, coordination and confidence — not hard contact.",
+      q5: "Are there separate women's groups?",
+      a5: "Yes. The women's kickboxing and women's BJJ classes run separately, in a safe and supportive environment.",
+      q6: "Do I need to be in shape before I start?",
+      a6: "No. People come in at every fitness level. Training builds fitness through work — we don't expect you to be ready before you start."
     },
     contact: {
-      title: "Contact",
+      eyebrow: "Contact",
+      title: "Book a class",
+      subtitle: "Send a message or reach out directly — we reply within 2 hours during opening hours.",
+      chipWhatsapp: "WhatsApp",
+      chipPhone: "Call",
+      chipInstagram: "Instagram",
       name: "Full name",
       email: "Email",
-      phone: "Phone",
+      phone: "Phone (optional)",
       program: "Program",
-      selectProgram: "Select program",
+      selectProgram: "Select a program",
       optMma: "Men's MMA",
       optKickbox: "Women's Kickboxing",
       optBjj: "Women's BJJ",
-      optKids: "Children's Group",
-      optFunctional: "Functional Training",
+      optKids: "Kids class",
+      optFunctional: "Functional training",
       message: "Message",
       submit: "Send",
-      success: "Thank you! Your message has been sent.",
+      responseNote: "We reply within 2h during opening hours.",
+      successTitle: "Message sent",
+      success: "We'll get back to you within 2h. Until then — warm up.",
       errorName: "Please enter your full name",
       errorEmail: "Please enter a valid email address",
       errorMessage: "Please enter a message",
+      errorSubmit: "Could not send. Try again or message us directly on WhatsApp.",
       addressLabel: "Address",
-      hoursLabel: "Working hours",
-      hours: "Mon - Fri: 17:00 - 21:00\nSat: 09:00 - 12:00"
+      hoursLabel: "Opening hours",
+      hours: "Mon – Fri: 17:00 – 21:00\nSat: 09:00 – 12:00"
+    },
+    sticky: {
+      main: "Free trial"
     },
     footer: {
-      tagline: "MMA Club Sarajevo",
+      tagline: "MMA Club · Dobrinja, Sarajevo",
       rights: "All rights reserved."
     }
   }
